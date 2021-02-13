@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class UserRestController
 {
     @Autowired
@@ -32,7 +33,7 @@ public class UserRestController
     {
         return userService.findByEmail(email);
     }  */
-   @GetMapping("/users/")
+   @GetMapping("/user")
    public User findByEmail(@RequestParam("email") String email)
     {
        return userService.findByEmail(email);
