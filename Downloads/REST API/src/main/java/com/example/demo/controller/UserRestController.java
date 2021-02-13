@@ -32,10 +32,9 @@ public class UserRestController
     {
         return userService.findByEmail(email);
     }  */
-   @GetMapping("/users/{email}")
-   public User findById(@RequestParam("email") String email)
+   @GetMapping("/users/")
+   public User findByEmail(@RequestParam("email") String email)
     {
-        System.out.println(userService.findByEmail(email).getEmail());
        return userService.findByEmail(email);
     }
 
