@@ -20,6 +20,7 @@ public class RestaurantRestController
         return restaurantService.findAll();
     }
 
+
     @GetMapping("/restaurants/{id}")
     public Restaurant findById(@PathVariable Long id)
     {

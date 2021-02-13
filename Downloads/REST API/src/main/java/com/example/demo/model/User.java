@@ -25,13 +25,4 @@ public abstract class User implements Serializable
     private String profilePhoto;
     private  String type ;
     private Date createdAt;
-
-    public User(Long id, String username, String email, String password, String profilePhoto, Date createdAt) {
-        this.id = id;
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.profilePhoto = profilePhoto;
-        this.createdAt = createdAt;
-    }
 }

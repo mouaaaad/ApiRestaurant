@@ -10,4 +10,6 @@ public interface IRateService
     public Rate findById(Long id);
     Rate save(Rate rate);
     void delete(Rate rate);
+
+    Double getRate(Long id);
 }

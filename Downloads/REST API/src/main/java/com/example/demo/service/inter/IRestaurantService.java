@@ -10,4 +10,5 @@ public interface IRestaurantService
     public Restaurant findById(Long id);
     Restaurant save(Restaurant restaurant);
     void delete(Restaurant restaurant);
+
 }

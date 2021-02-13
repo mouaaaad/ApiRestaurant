@@ -39,4 +39,9 @@ public class RateServiceImpl implements IRateService
     {
         rateRepository.delete(rate);
     }
+
+    @Override
+    public Double getRate(Long id) {
+        return rateRepository.getRate(id);
+    }
 }

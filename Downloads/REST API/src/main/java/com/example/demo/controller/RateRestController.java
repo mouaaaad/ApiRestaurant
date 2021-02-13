@@ -26,6 +26,12 @@ public class RateRestController
         return rateService.findById(id);
     }
 
+    @GetMapping("/rates/{id}/rate")
+    public Double getRate(@PathVariable Long id)
+    {
+        return rateService.getRate(id);
+    }
+
     @PostMapping("/rates/new")
     @ResponseStatus(HttpStatus.CREATED)
     public Rate newRate(@RequestBody Rate rate)

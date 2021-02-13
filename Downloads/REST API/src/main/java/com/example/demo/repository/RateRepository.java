@@ -15,4 +15,7 @@ public interface RateRepository extends JpaRepository<Rate, Long>
     @Modifying
     @Query(value = "truncate table rate", nativeQuery = true)
     void truncate();
+
+    @Query(value = "SELECT avg(rate) from Rate where restaurant_id=?#{#id}")
+    double getRate(Long id);
 }

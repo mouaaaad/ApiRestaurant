@@ -8,11 +8,13 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 //import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@Repository
+@Repository("restaurantRepository")
 //@RepositoryRestResource
 public interface RestaurantRepository extends JpaRepository<Restaurant, Long>
 {
     @Modifying
     @Query(value = "truncate table restaurant", nativeQuery = true)
     void truncate();
+
+
 }

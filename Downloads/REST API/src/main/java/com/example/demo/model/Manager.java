@@ -22,8 +22,8 @@ public class Manager extends User implements Serializable
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     Collection<Restaurant> restaurants;
 
-    public Manager(Long id, String username, String email, String password, String profilePhoto, Date createdAt)
+    public Manager(Long id, String username, String email, String password, String profilePhoto,String type, Date createdAt)
     {
-        super(id, username, email, password, profilePhoto, createdAt);
+        super(id, username, email, password, profilePhoto,type, createdAt);
     }
 }
