@@ -8,7 +8,7 @@ public interface IAppInitService
     public void initRestaurants();
     public void initMealCategories();
     public void initMeals();
-    public void initRate();
+    public void initReviews();
     public void initComment();
     public void initFavoriteRestaurant();
     public void insertAllData();

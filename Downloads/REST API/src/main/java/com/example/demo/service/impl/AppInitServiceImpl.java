@@ -39,7 +39,7 @@ public class AppInitServiceImpl implements IAppInitService
     MealRepository mealRepository;
 
     @Autowired
-    RateRepository rateRepository;
+    ReviewRepository reviewRepository;
 
     @Autowired
     CommentRepository commentRepository;
@@ -160,12 +160,12 @@ public class AppInitServiceImpl implements IAppInitService
     }
 
     @Override
-    public void initRate()
+    public void initReviews()
     {
-        rateRepository.save(new Rate(null, 2, clientRepository.findById(1L).get(), restaurantRepository.findById(1L).get()));
-        rateRepository.save(new Rate(null, 3, clientRepository.findById(1L).get(), restaurantRepository.findById(2L).get()));
-        rateRepository.save(new Rate(null, 4, clientRepository.findById(3L).get(), restaurantRepository.findById(1L).get()));
-        rateRepository.save(new Rate(null, 5, clientRepository.findById(3L).get(), restaurantRepository.findById(2L).get()));
+        reviewRepository.save(new Review(null, 2,"cool", new Date() , clientRepository.findById(1L).get(), restaurantRepository.findById(1L).get()));
+        reviewRepository.save(new Review(null, 3,"J'adore ce restaurant", new Date() ,  clientRepository.findById(1L).get(), restaurantRepository.findById(2L).get()));
+        reviewRepository.save(new Review(null, 4,"Je déconseille", new Date(),clientRepository.findById(3L).get(), restaurantRepository.findById(1L).get()));
+        reviewRepository.save(new Review(null, 5,"J'aime",new Date(), clientRepository.findById(3L).get(), restaurantRepository.findById(2L).get()));
     }
 
     @Override
@@ -198,7 +198,7 @@ public class AppInitServiceImpl implements IAppInitService
         initRestaurants(); // 4
         initMealCategories(); // 5
         initMeals(); // 6
-        initRate(); // 7
+        initReviews(); // 7
         initComment(); // 8
         initFavoriteRestaurant(); // 9
     }
@@ -210,7 +210,7 @@ public class AppInitServiceImpl implements IAppInitService
 
         favoriteRestaurantRepository.truncate(); // 9
         commentRepository.truncate(); // 8
-        rateRepository.truncate(); // 7
+        reviewRepository.truncate(); // 7
         mealRepository.truncate(); // 6
         mealCategoryRepository.truncate(); // 5
         restaurantRepository.truncate(); // 4
