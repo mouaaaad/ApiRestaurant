@@ -40,4 +40,9 @@ public class RestaurantServiceImpl implements IRestaurantService
         restaurantRepository.delete(restaurant);
     }
 
+    @Override
+    public Restaurant findByManager(String email) {
+        return restaurantRepository.findByManager(email);
+    }
+
 }
