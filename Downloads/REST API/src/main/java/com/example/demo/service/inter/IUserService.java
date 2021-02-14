@@ -13,4 +13,6 @@ public interface IUserService
     public void delete(User user);
 
     User findByEmail(String email);
+
+    User findByUsername(String username);
 }

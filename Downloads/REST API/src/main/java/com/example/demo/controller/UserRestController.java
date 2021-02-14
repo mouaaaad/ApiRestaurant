@@ -39,6 +39,12 @@ public class UserRestController
        return userService.findByEmail(email);
     }
 
+    @GetMapping("/user/")
+    public User findByUsername(@RequestParam("username") String username)
+    {
+        return userService.findByUsername(username);
+    }
+
     // ATTENTION, On peut pas appliquer ces méthodes directement sur la classe "User" car il s'agit d'une classe abstraite.
     // IL FAUT PASSER plûtot par les controleur associer au classes "CLIENT" & "MANAGER"
 
