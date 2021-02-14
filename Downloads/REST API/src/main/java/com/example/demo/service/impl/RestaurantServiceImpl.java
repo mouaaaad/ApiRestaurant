@@ -41,7 +41,7 @@ public class RestaurantServiceImpl implements IRestaurantService
     }
 
     @Override
-    public Restaurant findByManager(String email) {
+    public List<Restaurant> findByManager(String email) {
         return restaurantRepository.findByManager(email);
     }
 

@@ -28,7 +28,7 @@ public class RestaurantRestController
         return restaurantService.findById(id);
     }
     @GetMapping("/restaurant/{email}")
-    public Restaurant findByManager(@PathVariable String email)
+    public List<Restaurant> findByManager(@PathVariable String email)
     {
         return restaurantService.findByManager(email);
     }

@@ -11,5 +11,5 @@ public interface IRestaurantService
     Restaurant save(Restaurant restaurant);
     void delete(Restaurant restaurant);
 
-    Restaurant findByManager(String email);
+    List<Restaurant> findByManager(String email);
 }
