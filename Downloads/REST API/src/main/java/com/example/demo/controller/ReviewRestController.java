@@ -27,6 +27,12 @@ public class ReviewRestController
         return reviewService.findById(id);
     }
 
+    @GetMapping("/review/{id}")
+    public List<Review> findByIdr(@PathVariable Long id)
+    {
+        return reviewService.findByIdr(id);
+    }
+
     @GetMapping("/reviews/{id}/rate")
     public Double getRate(@PathVariable Long id)
     {

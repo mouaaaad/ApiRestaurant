@@ -44,4 +44,9 @@ public class ReviewServiceImpl implements IReviewService
     public Double getRate(Long id) {
         return reviewRepository.getRate(id);
     }
+
+    @Override
+    public List<Review> findByIdr(Long id) {
+        return reviewRepository.findByClient_Id(id);
+    }
 }

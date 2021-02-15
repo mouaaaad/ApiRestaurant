@@ -115,7 +115,7 @@ public class AppInitServiceImpl implements IAppInitService
                     instance.set(0, 0, 0, 23, 0, 0);
                     Date closingTime = instance.getTime();
 
-                    restaurantRepository.save(new Restaurant(null, "La Sqala", null, "0522260960", 33.602907494472916, -7.619123341144301,new Date(), city, openingTime, closingTime, restaurantCategory, manager, null, null));
+                    restaurantRepository.save(new Restaurant(null, "La Sqala", "https://firebasestorage.googleapis.com/v0/b/database-b2038.appspot.com/o/images%2F150dac23-b0fc-4937-b7b3-da82056b5da7?alt=media&token=ba85a89a-7c4e-445a-a74c-6171b1a63cad", "0522260960", 33.602907494472916, -7.619123341144301,new Date(), city, openingTime, closingTime, restaurantCategory, manager, null, null));
                 });
             });
         });
@@ -128,7 +128,7 @@ public class AppInitServiceImpl implements IAppInitService
             instance.set(0, 0, 0, 0, 0, 0);
             Date closingTime = instance.getTime();
 
-            restaurantRepository.save(new Restaurant(null, "Le Dhow", null, "0537702302", 34.028942633048786, -6.832355812393539,new Date(), cityRepository.findById(2L).get(), openingTime, closingTime, restaurantCategoryRepository.findById(2L).get(), managerRepository.findById(4L).get(), null, null));
+            restaurantRepository.save(new Restaurant(null, "Le Dhow", "https://firebasestorage.googleapis.com/v0/b/database-b2038.appspot.com/o/images%2F8c52143b-26db-4ec2-9917-d457bdebbcc8?alt=media&token=52f4514b-09d4-4ed2-9c9a-c8811bae7980", "0537702302", 34.028942633048786, -6.832355812393539,new Date(), cityRepository.findById(2L).get(), openingTime, closingTime, restaurantCategoryRepository.findById(2L).get(), managerRepository.findById(4L).get(), null, null));
         }
 
         {
@@ -138,7 +138,7 @@ public class AppInitServiceImpl implements IAppInitService
             instance.set(0, 0, 0, 0, 0, 0);
             Date closingTime = instance.getTime();
 
-            restaurantRepository.save(new Restaurant(null, "Little Japan", null, "0537363534", 34.260982980170155, -6.589085301636395,new Date(),cityRepository.findById(3L).get(), openingTime, closingTime, restaurantCategoryRepository.findById(2L).get(), managerRepository.findById(4L).get(), null, null));
+            restaurantRepository.save(new Restaurant(null, "Little Japan", "https://firebasestorage.googleapis.com/v0/b/database-b2038.appspot.com/o/images%2Fa5b8b5c4-5098-4f19-b512-f78e99df27a2?alt=media&token=edff9384-d5e0-47da-ae00-168378c040f3", "0537363534", 34.260982980170155, -6.589085301636395,new Date(),cityRepository.findById(3L).get(), openingTime, closingTime, restaurantCategoryRepository.findById(2L).get(), managerRepository.findById(4L).get(), null, null));
         }
 
     }

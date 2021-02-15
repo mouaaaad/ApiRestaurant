@@ -12,4 +12,6 @@ public interface IReviewService
     void delete(Review review);
 
     Double getRate(Long id);
+
+    List<Review> findByIdr(Long id);
 }
