@@ -39,4 +39,9 @@ public class MealServiceImpl implements IMealService
     {
         mealRepository.delete(meal);
     }
+
+    @Override
+    public List<Meal> findByRestaurant(String name) {
+        return mealRepository.findByRestaurant(name);
+    }
 }

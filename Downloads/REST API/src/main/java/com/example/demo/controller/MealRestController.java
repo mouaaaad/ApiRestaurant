@@ -21,6 +21,12 @@ public class MealRestController
         return mealService.findAll();
     }
 
+    @GetMapping("/meal/{name}")
+    public List<Meal> findByRestaurant(@PathVariable String name)
+    {
+        return mealService.findByRestaurant(name);
+    }
+
     @GetMapping("/meals/{id}")
     public Meal findById(@PathVariable Long id)
     {

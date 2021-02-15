@@ -10,4 +10,6 @@ public interface IMealService
     public Meal findById(Long id);
     Meal save(Meal meal);
     void delete(Meal meal);
+
+    List<Meal> findByRestaurant(String name);
 }
