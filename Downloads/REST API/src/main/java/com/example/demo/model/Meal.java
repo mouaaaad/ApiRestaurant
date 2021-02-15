@@ -18,6 +18,7 @@ public class Meal implements Serializable
     private Long id;
     private String meal;
     private Double price;
+    private String detail ;
     @ManyToOne
     private Restaurant restaurant;
     @ManyToOne

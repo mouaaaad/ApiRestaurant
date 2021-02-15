@@ -154,9 +154,9 @@ public class AppInitServiceImpl implements IAppInitService
     @Override
     public void initMeals()
     {
-        mealRepository.save(new Meal(null, "Hamburger", 30.00, restaurantRepository.findById(1L).get(), mealCategoryRepository.findById(1L).get()));
-        mealRepository.save(new Meal(null, "Double Cheese", 45.00, restaurantRepository.findById(2L).get(), mealCategoryRepository.findById(2L).get()));
-        mealRepository.save(new Meal(null, "Rosti", 60.00, restaurantRepository.findById(2L).get(), mealCategoryRepository.findById(3L).get()));
+        mealRepository.save(new Meal(null, "Hamburger", 30.00, "detail1",restaurantRepository.findById(1L).get(), mealCategoryRepository.findById(1L).get()));
+        mealRepository.save(new Meal(null, "Double Cheese", 45.00, "detail1",restaurantRepository.findById(2L).get(), mealCategoryRepository.findById(2L).get()));
+        mealRepository.save(new Meal(null, "Rosti", 60.00, "detail1",restaurantRepository.findById(2L).get(), mealCategoryRepository.findById(3L).get()));
     }
 
     @Override
