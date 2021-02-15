@@ -26,6 +26,8 @@ public class Restaurant implements Serializable
     private String phone;
     private Double latitude;
     private Double longitude;
+    @JsonFormat(pattern="yyyy-MM-dd")
+    private Date createdAt;
     @ManyToOne
     private City city;
     @Temporal(TemporalType.TIME)

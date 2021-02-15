@@ -20,4 +20,8 @@ public interface MealRepository extends JpaRepository<Meal, Long>
 
     @Query(value = "SELECT * FROM Meal INNER JOIN Restaurant  ON  Restaurant.id = meal.restaurant_id where Restaurant.name=?#{#name}",nativeQuery = true)
     List<Meal> findByRestaurant(String name);
+
+    @Modifying
+    @Query(value = "delete from meal where meal.meal=?#{#meal}", nativeQuery = true)
+    void deletebymeal(String meal);
 }

@@ -23,4 +23,13 @@ public interface RestaurantRepository extends JpaRepository<Restaurant, Long>
 
     Restaurant findByName(String name);
 
+    @Query(value = "delete from favorite_restaurant where client_id=?#{#id_c} and restaurant_id=?#{#id_r}", nativeQuery = true)
+    void deleteByIdr(Long id_c, Long id_r);
+
+    @Modifying
+    @Query(value = "delete from restaurant where restaurant.name=?#{#name}", nativeQuery = true)
+    void deletebyname(String name);
+
+    @Query(value = "SELECT * FROM restaurant WHERE created_at=date(NOW()); ",nativeQuery = true)
+    List<Restaurant> findByActualite();
 }

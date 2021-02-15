@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.model.FavoriteRestaurant;
 import com.example.demo.model.Restaurant;
 import com.example.demo.service.inter.IRestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,13 @@ public class RestaurantRestController
     {
         return restaurantService.findById(id);
     }
+
+    @GetMapping("/restaurants/actualite")
+    public List<Restaurant> findByActualite()
+    {
+        return restaurantService.findByActualite();
+    }
+
     @GetMapping("/restaurant/{email}")
     public List<Restaurant> findByManager(@PathVariable String email)
     {
@@ -58,5 +66,13 @@ public class RestaurantRestController
     public void deleteRestaurant(@RequestBody Restaurant restaurant)
     {
         restaurantService.delete(restaurant);
+    }
+
+
+    @DeleteMapping("/restaurants/delete/{name}")
+    @ResponseStatus(value = HttpStatus.OK, reason = "Restaurant deleted successfully")
+    public void deletebyname(@PathVariable String name)
+    {
+        restaurantService.deletebyname(name);
     }
 }

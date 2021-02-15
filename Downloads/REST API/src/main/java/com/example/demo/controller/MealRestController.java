@@ -53,4 +53,11 @@ public class MealRestController
     {
         mealService.delete(meal);
     }
+
+    @DeleteMapping("/meals/delete/{meal}")
+    @ResponseStatus(value = HttpStatus.OK, reason = "meal deleted successfully")
+    public void deletebymeal(@PathVariable String meal)
+    {
+        mealService.deletebymeal(meal);
+    }
 }

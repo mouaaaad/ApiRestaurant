@@ -14,4 +14,8 @@ public interface IRestaurantService
     List<Restaurant> findByManager(String email);
 
     Restaurant findByName(String name);
+
+    void deletebyname(String name);
+
+    List<Restaurant> findByActualite();
 }

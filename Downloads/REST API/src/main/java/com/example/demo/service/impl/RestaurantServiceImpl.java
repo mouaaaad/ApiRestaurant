@@ -49,5 +49,14 @@ public class RestaurantServiceImpl implements IRestaurantService
     public Restaurant findByName(String name) {
         return restaurantRepository.findByName(name);
     }
+    @Override
+    public void deletebyname(String name) {
+        restaurantRepository.deletebyname(name);
+    }
+
+    @Override
+    public List<Restaurant> findByActualite() {
+        return restaurantRepository.findByActualite();
+    }
 
 }

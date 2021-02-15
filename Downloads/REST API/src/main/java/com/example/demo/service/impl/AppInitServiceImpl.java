@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -114,7 +115,7 @@ public class AppInitServiceImpl implements IAppInitService
                     instance.set(0, 0, 0, 23, 0, 0);
                     Date closingTime = instance.getTime();
 
-                    restaurantRepository.save(new Restaurant(null, "La Sqala", null, "0522260960", 33.602907494472916, -7.619123341144301, city, openingTime, closingTime, restaurantCategory, manager, null, null));
+                    restaurantRepository.save(new Restaurant(null, "La Sqala", null, "0522260960", 33.602907494472916, -7.619123341144301,new Date(), city, openingTime, closingTime, restaurantCategory, manager, null, null));
                 });
             });
         });
@@ -127,7 +128,7 @@ public class AppInitServiceImpl implements IAppInitService
             instance.set(0, 0, 0, 0, 0, 0);
             Date closingTime = instance.getTime();
 
-            restaurantRepository.save(new Restaurant(null, "Le Dhow", null, "0537702302", 34.028942633048786, -6.832355812393539, cityRepository.findById(2L).get(), openingTime, closingTime, restaurantCategoryRepository.findById(2L).get(), managerRepository.findById(4L).get(), null, null));
+            restaurantRepository.save(new Restaurant(null, "Le Dhow", null, "0537702302", 34.028942633048786, -6.832355812393539,new Date(), cityRepository.findById(2L).get(), openingTime, closingTime, restaurantCategoryRepository.findById(2L).get(), managerRepository.findById(4L).get(), null, null));
         }
 
         {
@@ -137,7 +138,7 @@ public class AppInitServiceImpl implements IAppInitService
             instance.set(0, 0, 0, 0, 0, 0);
             Date closingTime = instance.getTime();
 
-            restaurantRepository.save(new Restaurant(null, "Little Japan", null, "0537363534", 34.260982980170155, -6.589085301636395, cityRepository.findById(3L).get(), openingTime, closingTime, restaurantCategoryRepository.findById(2L).get(), managerRepository.findById(4L).get(), null, null));
+            restaurantRepository.save(new Restaurant(null, "Little Japan", null, "0537363534", 34.260982980170155, -6.589085301636395,new Date(),cityRepository.findById(3L).get(), openingTime, closingTime, restaurantCategoryRepository.findById(2L).get(), managerRepository.findById(4L).get(), null, null));
         }
 
     }
