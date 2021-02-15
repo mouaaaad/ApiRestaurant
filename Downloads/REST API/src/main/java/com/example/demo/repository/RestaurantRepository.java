@@ -21,5 +21,6 @@ public interface RestaurantRepository extends JpaRepository<Restaurant, Long>
     @Query(value = "SELECT *FROM Restaurant INNER JOIN USER ON Restaurant.manager_id = USER.id where user.email=?#{#email}",nativeQuery = true)
     List<Restaurant> findByManager(String email);
 
+    Restaurant findByName(String name);
 
 }

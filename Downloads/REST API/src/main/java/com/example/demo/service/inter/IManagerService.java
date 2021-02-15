@@ -12,4 +12,6 @@ public interface IManagerService
     Manager save(Manager manager);
 
     void delete(Manager manager);
+
+    Manager findByEmail(String email);
 }

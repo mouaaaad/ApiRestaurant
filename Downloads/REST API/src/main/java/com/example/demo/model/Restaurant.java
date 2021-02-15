@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,6 +10,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
+
 
 @Entity
 @Data
@@ -27,8 +29,10 @@ public class Restaurant implements Serializable
     @ManyToOne
     private City city;
     @Temporal(TemporalType.TIME)
+    @JsonFormat(pattern="HH:mm")
     private Date openingTime;
     @Temporal(TemporalType.TIME)
+    @JsonFormat(pattern="HH:mm")
     private Date closingTime;
     @ManyToOne//(fetch = FetchType.LAZY)
     private RestaurantCategory restaurantCategory;

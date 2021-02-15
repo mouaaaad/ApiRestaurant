@@ -28,6 +28,12 @@ public class RestaurantCategoryRestController
         return restaurantCategoryService.findById(id);
     }
 
+    @GetMapping("/restaurantCategorie/{category}")
+    public RestaurantCategory findBycategory(@PathVariable String category)
+    {
+        return restaurantCategoryService.findBycategory(category);
+    }
+
     @PostMapping("/restaurantCategories/new")
     @ResponseStatus(HttpStatus.CREATED)
     public RestaurantCategory newRestaurantCategory(@RequestBody RestaurantCategory restaurantCategory)

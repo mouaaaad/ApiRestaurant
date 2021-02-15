@@ -15,4 +15,5 @@ public interface RestaurantCategoryRepository extends JpaRepository<RestaurantCa
     @Modifying
     @Query(value = "truncate table restaurant_category", nativeQuery = true)
     void truncate();
+    RestaurantCategory findByCategory(String category);
 }

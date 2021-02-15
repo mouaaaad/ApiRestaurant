@@ -39,4 +39,9 @@ public class RestaurantCategoryServiceImpl implements IRestaurantCategoryService
     {
         restaurantCategoryRepository.delete(restaurantCategory);
     }
+
+    @Override
+    public RestaurantCategory findBycategory(String category) {
+        return restaurantCategoryRepository.findByCategory(category);
+    }
 }

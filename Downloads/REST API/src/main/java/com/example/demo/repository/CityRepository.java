@@ -15,4 +15,6 @@ public interface CityRepository extends JpaRepository<City, Long>
     @Modifying
     @Query(value = "truncate table city", nativeQuery = true)
     void truncate();
+
+    City findByCity(String city);
 }

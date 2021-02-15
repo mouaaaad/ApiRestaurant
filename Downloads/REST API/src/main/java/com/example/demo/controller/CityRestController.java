@@ -26,6 +26,11 @@ public class CityRestController
     {
         return cityService.findById(id);
     }
+    @GetMapping("/citie/{city}")
+    public City findBycity(@PathVariable String city)
+    {
+        return cityService.findBycity(city);
+    }
 
     @PostMapping("/cities/new")
     @ResponseStatus(HttpStatus.CREATED)

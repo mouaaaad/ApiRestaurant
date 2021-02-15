@@ -39,4 +39,9 @@ public class ManagerServiceImpl implements IManagerService
     {
         managerRepository.delete(manager);
     }
+
+    @Override
+    public Manager findByEmail(String email) {
+        return managerRepository.findByEmail(email);
+    }
 }

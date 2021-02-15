@@ -15,4 +15,6 @@ public interface ManagerRepository extends JpaRepository<Manager, Long>
     @Modifying
     @Query(value = "truncate table manager", nativeQuery = true)
     void truncate();
+
+    Manager findByEmail(String email);
 }

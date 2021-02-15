@@ -12,4 +12,6 @@ public interface IRestaurantCategoryService
     RestaurantCategory save(RestaurantCategory restaurantCategory);
 
     void delete(RestaurantCategory restaurantCategory);
+
+    RestaurantCategory findBycategory(String category);
 }

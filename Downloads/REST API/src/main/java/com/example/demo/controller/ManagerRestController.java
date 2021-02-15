@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.model.Client;
 import com.example.demo.model.Manager;
+import com.example.demo.model.User;
 import com.example.demo.service.inter.IManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,6 +27,12 @@ public class ManagerRestController
     public Manager findById(@PathVariable Long id)
     {
         return managerService.findById(id);
+    }
+
+    @GetMapping("/manager")
+    public Manager findByEmail(@RequestParam("email") String email)
+    {
+        return managerService.findByEmail(email);
     }
 
     @PostMapping("/managers/new")

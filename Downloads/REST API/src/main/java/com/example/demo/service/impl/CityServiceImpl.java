@@ -39,4 +39,9 @@ public class CityServiceImpl implements ICityService
     {
         cityRepository.delete(city);
     }
+
+    @Override
+    public City findBycity(String city) {
+        return cityRepository.findByCity(city);
+    }
 }

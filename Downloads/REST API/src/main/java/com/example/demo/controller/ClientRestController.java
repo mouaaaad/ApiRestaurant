@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.Client;
+import com.example.demo.model.Manager;
 import com.example.demo.service.inter.IClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,6 +26,12 @@ public class ClientRestController
     public Client findById(@PathVariable Long id)
     {
         return clientService.findById(id);
+    }
+
+    @GetMapping("/client")
+    public Client findByEmail(@RequestParam String email)
+    {
+        return clientService.findByEmail(email);
     }
 
     @PostMapping("/clients/new")

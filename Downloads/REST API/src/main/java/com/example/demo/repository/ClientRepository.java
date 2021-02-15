@@ -15,4 +15,6 @@ public interface ClientRepository extends JpaRepository<Client, Long>
     @Modifying
     @Query(value = "truncate table client", nativeQuery = true)
     void truncate();
+
+    Client findByEmail(String email);
 }

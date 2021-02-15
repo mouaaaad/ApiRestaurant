@@ -33,6 +33,12 @@ public class RestaurantRestController
         return restaurantService.findByManager(email);
     }
 
+    @GetMapping("/restaurant/name/{name}")
+    public Restaurant findByName(@PathVariable String name)
+    {
+        return restaurantService.findByName(name);
+    }
+
     @PostMapping("/restaurants/new")
     @ResponseStatus(HttpStatus.CREATED)
     public Restaurant newRestaurant(@RequestBody Restaurant restaurant)

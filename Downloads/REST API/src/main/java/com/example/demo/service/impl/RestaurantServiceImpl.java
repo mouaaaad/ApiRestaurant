@@ -45,4 +45,9 @@ public class RestaurantServiceImpl implements IRestaurantService
         return restaurantRepository.findByManager(email);
     }
 
+    @Override
+    public Restaurant findByName(String name) {
+        return restaurantRepository.findByName(name);
+    }
+
 }
