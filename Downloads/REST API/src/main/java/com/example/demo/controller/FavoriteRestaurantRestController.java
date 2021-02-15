@@ -26,6 +26,18 @@ public class FavoriteRestaurantRestController
     {
         return favoriteRestaurantService.findById(id);
     }
+    @GetMapping("/favoriteRestaurant/{id_c}/{id_r}")
+    public FavoriteRestaurant findByaIdr(@PathVariable Long id_c,@PathVariable Long id_r)
+    {
+        return favoriteRestaurantService.findByIdr(id_c,id_r);
+    }
+    @GetMapping("/favoriteRestaurant/{id_c}")
+    public List<FavoriteRestaurant> findByaIdc(@PathVariable Long id_c)
+    {
+        return favoriteRestaurantService.findByIdc(id_c);
+    }
+
+
 
     @PostMapping("/favoriteRestaurants/new")
     @ResponseStatus(HttpStatus.CREATED)
@@ -41,10 +53,17 @@ public class FavoriteRestaurantRestController
         return favoriteRestaurantService.save(favoriteRestaurant);
     }
 
-    @DeleteMapping("/favoriteRestaurants/delete")
+    @DeleteMapping("/favoriteRestaurants/delete/{favorie}")
     @ResponseStatus(value = HttpStatus.OK, reason = "favoriteRestaurant deleted successfully")
-    public void deleteFavoriteRestaurant(@RequestBody FavoriteRestaurant favoriteRestaurant)
+    public void deleteFavoriteRestaurant(@PathVariable FavoriteRestaurant favoriteRestaurant)
     {
         favoriteRestaurantService.delete(favoriteRestaurant);
+    }
+
+    @DeleteMapping("/favoriteRestaurants/delete/{id_c}/{id_r}")
+    @ResponseStatus(value = HttpStatus.OK, reason = "favoriteRestaurant deleted successfully")
+    public void deleteByIdr(@PathVariable Long id_c,@PathVariable Long id_r)
+    {
+        favoriteRestaurantService.deleteByIdr(id_c,id_r);
     }
 }

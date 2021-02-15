@@ -39,4 +39,19 @@ public class FavoriteRestaurantServiceImpl implements IFavoriteRestaurantService
     {
         favoriteRestaurantRepository.delete(favoriteRestaurant);
     }
+
+    @Override
+    public FavoriteRestaurant findByIdr(Long id_c, Long id_r) {
+        return favoriteRestaurantRepository.findByIdr(id_c,id_r);
+    }
+
+    @Override
+    public void deleteByIdr(Long id_c, Long id_r) {
+          favoriteRestaurantRepository.deleteByIdr(id_c,id_r);
+    }
+
+    @Override
+    public List<FavoriteRestaurant> findByIdc(Long id_c) {
+        return favoriteRestaurantRepository.findByIdc(id_c);
+    }
 }
