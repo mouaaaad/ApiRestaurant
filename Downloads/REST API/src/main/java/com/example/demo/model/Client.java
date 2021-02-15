@@ -22,8 +22,8 @@ public class Client extends User implements Serializable
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Collection<FavoriteRestaurant> favoriteRestaurants;
 
-    public Client(Long id, String username, String email, String password, String profilePhoto, String type,Date createdAt)
+    public Client(Long id, String username, String email, String password, String tel,String city,String address, String address2, String profilePhoto, String type,Date createdAt)
     {
-        super(id, username, email, password, profilePhoto,type, createdAt);
+        super(id, username, email, password,   tel, city, address,  address2 , profilePhoto,type, createdAt);
     }
 }

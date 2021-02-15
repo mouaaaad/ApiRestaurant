@@ -23,6 +23,10 @@ public abstract class User implements Serializable
     @Column(unique=true)
     private String email;
     private String password;
+    private String city;
+    private String tel;
+    private String address;
+    private String address2;
     private String profilePhoto;
     private  String type ;
     private Date createdAt;

@@ -54,10 +54,10 @@ public class AppInitServiceImpl implements IAppInitService
     public void initUsers()
     {
         List<User> users = new ArrayList<>();
-        users.add(new Client(null, "mouad", "mouad@email.com", "123", null,"Client",new Date()));
-        users.add(new Manager(null, "nisrine", "nisrine@email.com", "123", null,"Manager", new Date()));
-        users.add(new Client(null, "ayoub", "ayoub@email.com", "123", null,"Client", new Date()));
-        users.add(new Manager(null, "hamza", "hamza@email.com", "123", null, "Manager",new Date()));
+        users.add(new Client(null, "mouad", "mouad@email.com", "123","","","","", null,"Client",new Date()));
+        users.add(new Manager(null, "nisrine", "nisrine@email.com", "123" ,"","","","", null,"Manager", new Date()));
+        users.add(new Client(null, "ayoub", "ayoub@email.com", "123","","","","", null,"Client", new Date()));
+        users.add(new Manager(null, "hamza", "hamza@email.com", "123","","","","", null, "Manager",new Date()));
         for (User user : users)
         {
             userRepository.save(user);
