@@ -47,6 +47,6 @@ public class ReviewServiceImpl implements IReviewService
 
     @Override
     public List<Review> findByIdr(Long id) {
-        return reviewRepository.findByClient_Id(id);
+        return reviewRepository.findByRestaurant_Id(id);
     }
 }

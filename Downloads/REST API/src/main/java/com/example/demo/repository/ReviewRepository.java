@@ -20,6 +20,6 @@ public interface ReviewRepository extends JpaRepository<Review, Long>
     @Query(value = "SELECT avg(rate) from Review where restaurant_id=?#{#id}")
     Double getRate(Long id);
 
-    List<Review> findByClient_Id(Long id);
+    List<Review> findByRestaurant_Id(Long id);
 
 }
