@@ -12,6 +12,7 @@ public interface IMealService
     void delete(Meal meal);
 
     List<Meal> findByRestaurant(String name);
+    List<Meal> findMealsById(Long id);
 
     void deletebymeal(String meal);
 }

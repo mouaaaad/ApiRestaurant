@@ -26,8 +26,12 @@ public class MealRestController
     {
         return mealService.findByRestaurant(name);
     }
-
     @GetMapping("/meals/{id}")
+    public List<Meal> findMealsById(@PathVariable Long id)
+    {
+        return mealService.findMealsById(id);
+    }
+    @GetMapping("/mealss/{id}")
     public Meal findById(@PathVariable Long id)
     {
         return mealService.findById(id);
