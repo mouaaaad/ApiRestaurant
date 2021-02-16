@@ -155,9 +155,9 @@ public class AppInitServiceImpl implements IAppInitService
     @Override
     public void initMeals()
     {
-        mealRepository.save(new Meal(null, "Hamburger", 30.00, "detail1",restaurantRepository.findById(1L).get(), mealCategoryRepository.findById(1L).get()));
-        mealRepository.save(new Meal(null, "Double Cheese", 45.00, "detail1",restaurantRepository.findById(2L).get(), mealCategoryRepository.findById(2L).get()));
-        mealRepository.save(new Meal(null, "Rosti", 60.00, "detail1",restaurantRepository.findById(2L).get(), mealCategoryRepository.findById(3L).get()));
+        mealRepository.save(new Meal(null, "Hamburger", 30.00, "detail1","https://firebasestorage.googleapis.com/v0/b/database-b2038.appspot.com/o/images%2Fplats%2F4908b698-68df-4932-9a9d-f71041a134b3?alt=media&token=5c18f82c-4ac0-4817-861f-56efa17e9d67",restaurantRepository.findById(1L).get(), mealCategoryRepository.findById(1L).get()));
+        mealRepository.save(new Meal(null, "Double Cheese", 45.00, "detail1","https://firebasestorage.googleapis.com/v0/b/database-b2038.appspot.com/o/images%2Fplats%2F4908b698-68df-4932-9a9d-f71041a134b3?alt=media&token=5c18f82c-4ac0-4817-861f-56efa17e9d67",restaurantRepository.findById(2L).get(),mealCategoryRepository.findById(2L).get()));
+        mealRepository.save(new Meal(null, "Rosti", 60.00, "detail1","https://firebasestorage.googleapis.com/v0/b/database-b2038.appspot.com/o/images%2Fplats%2F90d52bbe-3582-479d-a0e0-7967753feff9?alt=media&token=4af57fe1-1ad4-433e-994c-03addf28128a",restaurantRepository.findById(2L).get(), mealCategoryRepository.findById(3L).get()));
     }
 
     @Override
